@@ -18,12 +18,12 @@ meter.run({ host: 'hostname.example.com', port: 50000}, result => {
 
 ## Installation
 ```shellscript
-npm install voltcfraft-vsm-102-telnet
+npm install voltcraft-vsm-102-telnet
 ```
 ## <a name="very-important"></a>VERY IMPORTANT!
 
 ### Buggy readings: Purchased power (kWh).
-This Voltcraft VMS-102 contains a pretty serious bug related to meter readings of purcased power (kWh). The [documentation](https://asset.conrad.com/media10/add/160267/c1/-/gl/000125439ML01/manual-125439-voltcraft-vsm-102-electricity-meter-3-phase-digital-mid-approved-no-1-pcs.pdf) states _"Meter readings in kWh with 6 pre-decimal and 2 post-decimal digits"_. 
+The Voltcraft VMS-102 contains a pretty serious bug related to meter readings of purcased power (kWh). The [documentation](https://asset.conrad.com/media10/add/160267/c1/-/gl/000125439ML01/manual-125439-voltcraft-vsm-102-electricity-meter-3-phase-digital-mid-approved-no-1-pcs.pdf) states _"Meter readings in kWh with 6 pre-decimal and 2 post-decimal digits"_. 
 
 This is simply not true. In reality there are 5+2 digits, and the values does not roll over at 99999.99kWh. This gives readings of `?????.??*kWh`, which are not valid. 
 
@@ -73,8 +73,8 @@ Only fields sent when __verbose: true__ is commented. The rest of the fealds are
 {
   ts: 1636906115251,
   checksum: { 
-    bcc: 120,             /* BCC as sent from device */
-    lrc: 120,             /* LRC calculated over date sent from device */
+    bcc: 120,             /* BCC sent from device */
+    lrc: 120,             /* LRC calculated over data sent from device */
     match: true           /* Do they match? */
   },
   power: { 
@@ -100,7 +100,7 @@ Only fields sent when __verbose: true__ is commented. The rest of the fealds are
     outage: {
       L1: false,          /* bit[5]: true if L1 outage. */ 
       L2: false,          /* bit[4]: true if L2 outage. */ 
-      L3: false,          /* bit[3]: true if L2 outage. */ 
+      L3: false,          /* bit[3]: true if L3 outage. */ 
     }
     idle: false,          /* bit[6]: true if idle, false if 'above start-up' */
     error: false          /* bit[0]: true on error. */ 

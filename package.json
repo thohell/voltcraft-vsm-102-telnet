@@ -15,7 +15,7 @@
     },
     "license": "ISC",
     "name": "voltcraft-vsm-102-telnet",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Read Voltcraft VSM-102 electricity meter(s) via rs485-to-telnet converter.",
     "author": {
         "name": "Thomas Hellström",
