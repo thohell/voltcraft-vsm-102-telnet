@@ -17,11 +17,7 @@
     "name": "voltcraft-vsm-102-telnet",
     "version": "1.0.1",
     "description": "Read Voltcraft VSM-102 electricity meter(s) via rs485-to-telnet converter.",
-    "author": {
-        "name": "Thomas Hellström",
-        "email": "rel@xed.se",
-        "url": "https://github.com/thohell"
-    },
+    "author": "Thomas Hellström <rel@xed.se> (https://github.com/thohell)",
     "repository": "github:thohell/voltcraft-vsm-102-telnet",
     "homepage": "https://github.com/thohell/voltcraft-vsm-102-telnet"
 }
