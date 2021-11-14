@@ -1,0 +1,27 @@
+{
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "electricity meter",
+        "power meter",
+        "rs-485",
+        "voltcraft vsm-102",
+        "smart home"
+    ],
+    "dependencies": {
+        "telnet-client": "^1.4.11"
+    },
+    "license": "ISC",
+    "name": "voltcraft-vsm-102-telnet",
+    "version": "1.0.0",
+    "description": "Read Voltcraft VSM-102 electricity meter(s) via rs485-to-telnet converter.",
+    "author": {
+        "name": "Thomas Hellström",
+        "email": "rel@xed.se",
+        "url": "https://github.com/thohell"
+    },
+    "repository": "github:thohell/voltcraft-vsm-102-telnet",
+    "homepage": "https://github.com/thohell/voltcraft-vsm-102-telnet"
+}
